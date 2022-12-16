@@ -4,13 +4,16 @@
 // See page 45.
 
 // (Package doc comment intentionally malformed to demonstrate golint.)
-//!+
+// !+
 package popcount
+
+import "fmt"
 
 // pc[i] is the population count of i.
 var pc [256]byte
 
 func init() {
+	fmt.Println("Popcount. Init method")
 	for i := range pc {
 		pc[i] = pc[i/2] + byte(i&1)
 	}
