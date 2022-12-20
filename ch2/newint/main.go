@@ -16,10 +16,6 @@ func main() {
 	fmt.Println(popcount.PopCount(0x1234567890ABCDEF))
 }
 
-func newInt() *int {
-	return new(int)
-}
-
 func newInt2() *int {
 	var dummy int
 	return &dummy
