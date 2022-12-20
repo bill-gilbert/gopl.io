@@ -13,7 +13,7 @@ import "fmt"
 var pc [256]byte
 
 func init() {
-	fmt.Println("Popcount. Init method")
+	fmt.Println(\"Popcount. Init method")
 	for i := range pc {
 		pc[i] = pc[i/2] + byte(i&1)
 	}
