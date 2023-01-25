@@ -8,4 +8,7 @@ func main() {
 		fmt.Println(medals[i]) //  "бронза",  "серебро",  "золото”
 	}
 
+	var z float64
+	fmt.Println(12 / z)
+
 }
