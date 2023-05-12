@@ -30,6 +30,10 @@ func equal(x, y map[string]int) bool {
 		if yv, ok := y[k]; !ok || yv != xv {
 			return false
 		}
+		//
+		// if xv != y[k] {
+		// 	return false
+		// }
 	}
 	return true
 }
@@ -66,13 +70,13 @@ func main() {
 	var age, res = test["unknown"]
 
 	if !res {
-		fmt.Printf("unknown %t is err", res)
+		fmt.Printf("unknown %t is err \n", res)
 	} else {
-		fmt.Printf("unknown %d", age)
+		fmt.Printf("unknown %d \n", age)
 	}
 
-	firstMap := map[string]int{"One": 1, "Two": 2}
-	secondMap := map[string]int{"One": 1, "Two": 2}
-	fmt.Println(equal(firstMap, secondMap))
+	//	firstMap := map[string]int{"One": 1, "Two": 2}
+	//	secondMap := map[string]int{"One": 1, "Two": 2}
+	//	fmt.Println(equal(firstMap, secondMap))
 	fmt.Println(equal(map[string]int{"A": 0}, map[string]int{"B": 42}))
 }
