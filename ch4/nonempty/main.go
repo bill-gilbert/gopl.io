@@ -30,10 +30,12 @@ func main() {
 	data := []string{"one", "", "three"}
 	fmt.Printf("%q\n", nonempty(data)) // `["one" "three"]`
 	fmt.Printf("%q\n", data)           // `["one" "three" "three"]`
+	var out = data[:0]
+	fmt.Println(len(out))
 	//!-main
 }
 
-//!+alt
+// !+alt
 func nonempty2(strings []string) []string {
 	out := strings[:0] // zero-length slice of original
 	for _, s := range strings {
