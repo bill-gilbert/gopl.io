@@ -60,6 +60,9 @@ func main() {
 		fmt.Printf("%d  cap=%d\t%v\n", i, cap(y), y)
 		x = y
 	}
+
+	names := make([]string, 0, 15)
+	fmt.Println(cap(names))
 }
 
 //!-growth
